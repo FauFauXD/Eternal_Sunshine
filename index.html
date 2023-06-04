@@ -150,6 +150,37 @@ h2{
 }
 
 
+.textarea {
+  background-color: greenyellow;
+  color: magenta;
+  padding: 1em;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: none;
+  font-family: "Heebo", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  width: 200px;
+  height: 100px;
+  transition: all 0.2s;
+}
+
+.textarea:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+
+.textarea:focus {
+  cursor: text;
+  color: cyan;
+  background-color: white;
+  border-color: gold;
+}
+
+
+
+
     
   </style>
   <script>
@@ -181,7 +212,7 @@ h2{
         <div class="inhalt">
           
         <h1>Frage1</h1> 
-        <textarea name="text" id="text" placeholder="Mehr dazu schreiben">  </textarea>
+        <textarea class="textarea" placeholder="Enter a message..."></textarea>
        
         
         <h1>Frage2</h1> 
