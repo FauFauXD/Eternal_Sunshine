@@ -20,6 +20,11 @@
     src: url("/Font/IBMPlexSans-Bold.woff2") format("woff2");
 }
 
+@font-face {
+    font-family: "TEXT";
+    src: url("/Font/IBMPlexSerif-Italic.woff2") format("woff2");
+}
+
 
  
      
@@ -137,17 +142,18 @@
   h1{
     color: magenta;
     font-family: "LIGHT";
-    font-size: 2em;
+    font-size: 1.2em;
     text-align: center;
 }
-
 
 h2{
-    color: lightgreen;
-    font-family: "BOLD";
-    font-size: 2em;
+    color: magenta;
+    font-family: "TEXT";
+    font-size: 1.2em;
     text-align: center;
 }
+
+
 
 
 .textarea {
@@ -179,17 +185,36 @@ h2{
 }
 
 
-
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
     
   </style>
   <script>
- document.addEventListener('DOMContentLoaded', function() {
+     document.addEventListener('DOMContentLoaded', function() {
       var sektionen = document.querySelectorAll('.akkordeon .sektion');
 
       sektionen.forEach(function(sektion, index) {
         sektion.style.setProperty('--index', index);
         sektion.addEventListener('click', toggleSektion);
+      });
+
+      var buttons = document.querySelectorAll('.akkordeon .sektion button');
+
+      buttons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+          event.stopPropagation();
+        });
       });
 
       function toggleSektion(event) {
@@ -213,6 +238,8 @@ h2{
   <body>
     <div class="akkordeon">
       
+      <!-- STEP 1 -->
+
       <div class="sektion">Step 1 
         <div class="inhalt">
           
@@ -229,8 +256,24 @@ h2{
          </div>
       </div>
       
+      <!-- STEP 2 -->
+
       <div class="sektion">Step 2
-        <div class="inhalt">Lorem ipsum</div>
+        <div class="inhalt">
+
+          <h1>Was hat dich Verletzt?</h1> 
+          <textarea class="textarea" placeholder="seine hässliche Vissage..."></textarea>
+
+          <br>
+
+          <button>Default Button</button> 
+
+          <h1>Tagebuch</h1> 
+          <h2>Was für ein unvergesslicher Abend! Meine Kunstausstellung war ein voller Erfolg. Es war überwältigend, so viele Menschen zu sehen, die meine Werke betrachten und darüber diskutieren. Die positiven Rückmeldungen und der Zuspruch haben mich tief berührt. Ich bin dankbar für all die Unterstützung, die ich auf meinem Weg erhalten habe.</h2>
+
+
+
+        </div>
       </div>
      
       <div class="sektion">Step 3
