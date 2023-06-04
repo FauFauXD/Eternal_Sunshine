@@ -157,7 +157,7 @@ h2{
   border-radius: 10px;
   border: 2px solid transparent;
   outline: none;
-  font-family: "Heebo", sans-serif;
+  font-family: "BOLD";
   font-weight: 500;
   font-size: 16px;
   line-height: 1.4;
@@ -184,7 +184,7 @@ h2{
     
   </style>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+ document.addEventListener('DOMContentLoaded', function() {
       var sektionen = document.querySelectorAll('.akkordeon .sektion');
 
       sektionen.forEach(function(sektion, index) {
@@ -192,7 +192,12 @@ h2{
         sektion.addEventListener('click', toggleSektion);
       });
 
-      function toggleSektion() {
+      function toggleSektion(event) {
+        if (event.target.tagName === 'TEXTAREA') {
+          event.stopPropagation();
+          return;
+        }
+
         var aktiveSektion = document.querySelector('.akkordeon .sektion.aktiv');
 
         if (aktiveSektion && aktiveSektion !== this) {
@@ -211,15 +216,15 @@ h2{
       <div class="sektion">Step 1 
         <div class="inhalt">
           
-        <h1>Frage1</h1> 
-        <textarea class="textarea" placeholder="Enter a message..."></textarea>
+        <h1>Wie heisst du?</h1> 
+        <textarea class="textarea" placeholder="Name..."></textarea>
        
         
-        <h1>Frage2</h1> 
-        <h2>Antwort2</h2> 
+        <h1>Wie ist heisst die Person die dich Verletzt hat?</h1> 
+        <textarea class="textarea" placeholder="Name..."></textarea>
 
-        <h1>Frage3</h1> 
-        <h2>Antwort3</h2> 
+        <h1>Wie war euer Beziehungsstatus?</h1> 
+        <textarea class="textarea" placeholder="Freundin, Kollegin..."></textarea>
          
          </div>
       </div>
