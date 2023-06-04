@@ -6,9 +6,21 @@
   <style>
      
      @font-face {
+    font-family: "THIN";
+    src: url("/Font/IBMPlexSans-Thin.woff2") format("woff2");
+}
+
+@font-face {
     font-family: "LIGHT";
     src: url("/Font/IBMPlexSans-Light.woff2") format("woff2");
 }
+
+@font-face {
+    font-family: "BOLD";
+    src: url("/Font/IBMPlexSans-Bold.woff2") format("woff2");
+}
+
+
  
      
      
@@ -25,7 +37,7 @@
     max-height: 100vh;
     overflow: hidden;
     transition: all 0.5s ease;
-    font-family: "LIGHT";
+    font-family: "THIN";
     font-size: 1em;
     color: white;
     text-align: center;
@@ -117,9 +129,26 @@
   }
 
   .inhalt {
-    font-size: 10px;
+    
 
   }
+
+
+  h1{
+    color: magenta;
+    font-family: "LIGHT";
+    font-size: 2em;
+    text-align: center;
+}
+
+
+h2{
+    color: lightgreen;
+    font-family: "BOLD";
+    font-size: 2em;
+    text-align: center;
+}
+
 
     
   </style>
@@ -149,7 +178,19 @@
     <div class="akkordeon">
       
       <div class="sektion">Step 1 
-        <div class="inhalt">Lorem ipsum</div>
+        <div class="inhalt">
+          
+        <h1>Frage1</h1> 
+        <textarea name="text" id="text" placeholder="Mehr dazu schreiben">  </textarea>
+       
+        
+        <h1>Frage2</h1> 
+        <h2>Antwort2</h2> 
+
+        <h1>Frage3</h1> 
+        <h2>Antwort3</h2> 
+         
+         </div>
       </div>
       
       <div class="sektion">Step 2
