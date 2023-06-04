@@ -170,6 +170,8 @@ h2{
   width: 200px;
   height: 100px;
   transition: all 0.2s;
+  resize: none;
+  overflow: auto;
 }
 
 .textarea:hover {
@@ -197,6 +199,15 @@ h2{
   margin: 4px 2px;
   cursor: pointer;
 }
+
+
+.scroll-box {
+    background: #f4f4f4;
+    height: 400px; /* maximum height of the box, feel free to change this! */
+    padding: 15px;
+    overflow-y: scroll;
+}
+
 
     
   </style>
@@ -268,8 +279,15 @@ h2{
 
           <button>Default Button</button> 
 
-          <h1>Tagebuch</h1> 
-          <h2>Was für ein unvergesslicher Abend! Meine Kunstausstellung war ein voller Erfolg. Es war überwältigend, so viele Menschen zu sehen, die meine Werke betrachten und darüber diskutieren. Die positiven Rückmeldungen und der Zuspruch haben mich tief berührt. Ich bin dankbar für all die Unterstützung, die ich auf meinem Weg erhalten habe.</h2>
+          <h1>Tagebuch</h1>
+          <div class="scroll-box"> <h2>Was für ein unvergesslicher Abend! Meine Kunstausstellung war ein voller Erfolg.
+            Es war überwältigend, so viele Menschen zu sehen, die meine Werke betrachten und darüber diskutieren. Die positiven Rückmeldungen und der Zuspruch haben mich tief berührt. Ich bin dankbar für all die Unterstützung, die ich auf meinem Weg erhalten habe.
+            Es war überwältigend, so viele Menschen zu sehen, die meine Werke betrachten und darüber diskutieren. Die positiven Rückmeldungen und der Zuspruch haben mich tief berührt. Ich bin dankbar für all die Unterstützung, die ich auf meinem Weg erhalten habe.
+            Es war überwältigend, so viele Menschen zu sehen, die meine Werke betrachten und darüber diskutieren. Die positiven Rückmeldungen und der Zuspruch haben mich tief berührt. Ich bin dankbar für all die Unterstützung, die ich auf meinem Weg erhalten habe.
+            Es war überwältigend, so viele Menschen zu sehen, die meine Werke betrachten und darüber diskutieren. Die positiven Rückmeldungen und der Zuspruch haben mich tief berührt. Ich bin dankbar für all die Unterstützung, die ich auf meinem Weg erhalten habe.</h2>
+          
+          </div> 
+          <h2></h2>
 
 
 
