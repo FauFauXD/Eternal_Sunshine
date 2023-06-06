@@ -1,211 +1,198 @@
-   
-     @font-face {
-      font-family: "THIN";
-      src: url("/Font/IBMPlexSans-Thin.woff2") format("woff2");
-  }
-  
-  @font-face {
-      font-family: "LIGHT";
-      src: url("/Font/IBMPlexSans-Light.woff2") format("woff2");
-  }
-  
-  @font-face {
-      font-family: "BOLD";
-      src: url("/Font/IBMPlexSans-Bold.woff2") format("woff2");
-  }
-  
-  @font-face {
-      font-family: "TEXT";
-      src: url("/Font/IBMPlexSerif-Italic.woff2") format("woff2");
-  }
-  
-  
-   
-       
-       
-       
-       body {
-      margin: 0;
-      padding: 0;
-    }
-  
-    .akkordeon {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      max-height: 100vh;
-      overflow: hidden;
-      transition: all 0.5s ease;
-      font-family: "THIN";
-      font-size: 1em;
-      color: white;
-      text-align: center;
-      
-  
-    }
-  
-    .akkordeon .sektion {
-      position: relative;
-      height: 8vh;
-      cursor: pointer;
-      transition: all 0.5s ease;
-    }
-  
-    .akkordeon .sektion:nth-child(1) {
-      background-color: #2d4e64;
-      fill: #2d4e64;
-      border-radius: 80vw 80vw 0vw 0vw;
-    }
-  
-    .akkordeon .sektion:nth-child(2) {
-      background-color: #3d5763;
-      border-radius: 80vw 80vw 0vw 0vw;
-    }
-  
-    .akkordeon .sektion:nth-child(3) {
-      background-color:#4f6063;
-      border-radius: 80vw 80vw 0vw 0vw;
-    }
-  
-    .akkordeon .sektion:nth-child(4) {
-      background-color: #626a63;
-      border-radius: 80vw 80vw 0vw 0vw;
-    }
-  
-    .akkordeon .sektion:nth-child(5) {
-      background-color: #757363;
-      border-radius: 80vw 80vw 0vw 0vw;
-    }
-  
-    .akkordeon .sektion:nth-child(6) {
-      background-color: #887c63;
-      border-radius: 80vw 80vw 0vw 0vw;
-    }
-  
-    .akkordeon .sektion:nth-child(7) {
-      background-color: #9c8563;
-      border-radius: 80vw 80vw 0vw 0vw;
-    }
-  
-    .akkordeon .sektion:nth-child(8) {
-      background-color: #b08f64;
-      border-radius: 80vw 80vw 0vw 0vw;
-    }
-  
-    .akkordeon .sektion:nth-child(9) {
-      background-color: #c49865;
-      border-radius: 80vw 80vw 0vw 0vw;
-    }
-  
-    .akkordeon .sektion:nth-child(10) {
-      background-color: #d7a265;
-      border-radius: 80vw 80vw 0vw 0vw;
-    }
-  
-    .akkordeon .sektion:nth-child(11) {
-      background-color: #ebab67;
-      border-radius: 80vw 80vw 0vw 0vw;
-    }
-  
-    .akkordeon .sektion.aktiv {
-      height: calc(100vh - 8vh);
-      margin-top: calc(-8vh * var(--index));
-      margin-bottom: 0;
-    }
-  
-    .akkordeon .sektion.aktiv:last-child {
-      height: 100vh !important;
-    }
-  
-    .akkordeon .inhalt {
-      display: none;
-      padding: 10px;
-      
-    }
-  
-    .akkordeon .sektion.aktiv .inhalt {
-      display: block;
-    }
-  
-    .inhalt {
-      
-  
-    }
-  
-  
-    h1{
-      color: magenta;
-      font-family: "LIGHT";
-      font-size: 1.2em;
-      text-align: center;
-  }
-  
-  h2{
-      color: magenta;
-      font-family: "TEXT";
-      font-size: 1.2em;
-      text-align: center;
-  }
-  
-  
-  
-  
-  .textarea {
-    background-color: greenyellow;
-    color: magenta;
-    padding: 1em;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    outline: none;
+ @font-face {
+    font-family: "THIN";
+    src: url("/Font/IBMPlexSans-Thin.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "LIGHT";
+    src: url("/Font/IBMPlexSans-Light.woff2") format("woff2");
+}
+
+@font-face {
     font-family: "BOLD";
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.4;
-    width: 200px;
-    height: 100px;
-    transition: all 0.2s;
-    resize: none;
-    overflow: auto;
+    src: url("/Font/IBMPlexSans-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "TEXT";
+    src: url("/Font/IBMPlexSerif-Italic.woff2") format("woff2");
+}
+
+
+ 
+     
+     
+     
+     body {
+    margin: 0;
+    padding: 0;
   }
-  
-  .textarea:hover {
-    cursor: pointer;
-    background-color: #eeeeee;
-  }
-  
-  .textarea:focus {
-    cursor: text;
-    color: cyan;
-    background-color: white;
-    border-color: gold;
-  }
-  
-  
-  .button {
-    background-color: #4CAF50;
-    border: none;
+
+  .akkordeon {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    font-family: "THIN";
+    font-size: 1em;
     color: white;
-    padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    
+
+  }
+
+  .akkordeon .sektion {
+    position: relative;
+    height: 8vh;
     cursor: pointer;
+    transition: all 0.5s ease;
+    
   }
-  
-  
-  .scroll-box {
-      background: #f4f4f4;
-      height: 400px; /* maximum height of the box, feel free to change this! */
-      padding: 15px;
-      overflow-y: scroll;
+
+  .akkordeon .sektion:nth-child(1) {
+    background-color: #2d4e64;
+    border-radius: 80vw 80vw 0vw 0vw;
   }
-  
-  
-  .Bild{
-    width: 50vw;
-    mix-blend-mode: multiply;
+
+  .akkordeon .sektion:nth-child(2) {
+    background-color: #3d5763;
+    border-radius: 80vw 80vw 0vw 0vw;
   }
-  
-      
+
+  .akkordeon .sektion:nth-child(3) {
+    background-color:#4f6063;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+
+  .akkordeon .sektion:nth-child(4) {
+    background-color: #626a63;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+
+  .akkordeon .sektion:nth-child(5) {
+    background-color: #757363;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+
+  .akkordeon .sektion:nth-child(6) {
+    background-color: #887c63;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+
+  .akkordeon .sektion:nth-child(7) {
+    background-color: #9c8563;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+
+  .akkordeon .sektion:nth-child(8) {
+    background-color: #b08f64;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+
+  .akkordeon .sektion:nth-child(9) {
+    background-color: #c49865;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+
+  .akkordeon .sektion:nth-child(10) {
+    background-color: #d7a265;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+
+  .akkordeon .sektion:nth-child(11) {
+    background-color: #ebab67;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+
+  .akkordeon .sektion.aktiv {
+    height: calc(100vh - 8vh);
+    margin-top: calc(-8vh * var(--index));
+    margin-bottom: 0;
+  }
+
+  .akkordeon .sektion.aktiv:last-child {
+    height: 100vh !important;
+  }
+
+  .akkordeon .inhalt {
+    display: none;
+    padding: 10px;
+    
+  }
+
+  .akkordeon .sektion.aktiv .inhalt {
+    display: block;
+  }
+
+  .inhalt {
+    
+
+  }
+
+
+  h1{
+    color: magenta;
+    font-family: "LIGHT";
+    font-size: 1.2em;
+    text-align: center;
+}
+
+h2{
+    color: magenta;
+    font-family: "TEXT";
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+
+
+.textarea {
+  background-color: greenyellow;
+  color: magenta;
+  padding: 1em;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: none;
+  font-family: "BOLD";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  width: 200px;
+  height: 100px;
+  transition: all 0.2s;
+  resize: none;
+  overflow: auto;
+}
+
+.textarea:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+
+.textarea:focus {
+  cursor: text;
+  color: cyan;
+  background-color: white;
+  border-color: gold;
+}
+
+
+
+
+.scroll-box {
+    background: #f4f4f4;
+    height: 400px; /* maximum height of the box, feel free to change this! */
+    padding: 15px;
+    overflow-y: scroll;
+}
+
+
+.Bild{
+  width: 50vw;
+  mix-blend-mode: multiply;
+  filter: brightness(1.2);
+  filter: sepia(1)
+}
