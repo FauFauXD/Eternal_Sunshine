@@ -18,8 +18,14 @@
     src: url("/Font/IBMPlexSerif-Italic.woff2") format("woff2");
 }*/
 
-
- 
+.title{
+  margin-top: 10vw;
+  text-align: center;
+  font-size: 10vw;
+}
+.titleText{
+  text-align: center;
+}
      
      
      
