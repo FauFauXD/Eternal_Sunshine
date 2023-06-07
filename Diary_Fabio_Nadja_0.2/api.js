@@ -35,7 +35,7 @@ const openAIApi = new OpenAIApi(configuration);
 		                promptRelationship = document.querySelector('#relationship').value;
 						const promptNegStory = document.querySelector('#neg_Story').value;
 						const prompt = "Name Autor: " + promptName1 + ", Name der anderen Person: " + promptName2 + ", Unser Beziehungsstatus: " + promptRelationship + ", Das hat mich verletzt: " + promptNegStory;		
-							
+						
 						document.getElementById("nameText").innerHTML = promptName2;
                         
                         //--- CHAT GPT REQUEST ---//
@@ -52,6 +52,8 @@ const openAIApi = new OpenAIApi(configuration);
 						});
 						console.log(completion)
 						text[index++] = completion.data.choices[0].message.content;
+
+						document.getElementById("loading1").style.display = "none";
 
 						//--- DIARY TEXT ---//
 						outputText = oldText + " " + text[0];
@@ -81,6 +83,8 @@ const openAIApi = new OpenAIApi(configuration);
 					});
 					console.log(completion)
 					text[index++] = completion.data.choices[0].message.content;
+
+					document.getElementById("loading2").style.display = "none";
 
 					//--- DIARY TEXT ---//
 					outputText = oldText + " " + text[1];
@@ -120,6 +124,8 @@ const openAIApi = new OpenAIApi(configuration);
 					});
 					console.log(completion)
 					text[index++] = completion.data.choices[0].message.content;
+
+					document.getElementById("loading3").style.display = "none";
 
 					//--- DIARY TEXT ---//
 					outputText = oldText + " " + text[2];
@@ -162,6 +168,8 @@ const openAIApi = new OpenAIApi(configuration);
 					console.log(completion)
 					text[index++] = completion.data.choices[0].message.content;
 
+					document.getElementById("loading4").style.display = "none";
+
 					//--- DIARY TEXT ---//
 					outputText = text[0] + " " + text[1] + " " + text[3];
 					oldText = outputText;
@@ -203,6 +211,8 @@ const openAIApi = new OpenAIApi(configuration);
 					console.log(completion)
 					text[index++] = completion.data.choices[0].message.content;
 
+					document.getElementById("loading5").style.display = "none";
+
 					//--- DIARY TEXT ---//
 					outputText = text[0] + " " + text[3] + " " + text[4];
 					oldText = outputText;
@@ -236,6 +246,8 @@ const openAIApi = new OpenAIApi(configuration);
 					});
 					console.log(completion)
 					text[index++] = completion.data.choices[0].message.content;
+
+					document.getElementById("loading6").style.display = "none";
 
 				//--- DIARY TEXT ---//
 				outputText = text[5];
