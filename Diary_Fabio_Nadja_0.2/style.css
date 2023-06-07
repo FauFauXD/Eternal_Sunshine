@@ -1,0 +1,279 @@
+ /*@font-face {
+    font-family: "THIN";
+    src: url("/Font/IBMPlexSans-Thin.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "LIGHT";
+    src: url("/Font/IBMPlexSans-Light.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BOLD";
+    src: url("/Font/IBMPlexSans-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "TEXT";
+    src: url("/Font/IBMPlexSerif-Italic.woff2") format("woff2");
+}*/
+
+
+ 
+     
+     
+     
+     body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .akkordeon {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    font-family: "THIN";
+    font-size: 1em;
+    color: white;
+    text-align: center;
+  }
+
+  .akkordeon .sektion {
+    position: relative;
+    margin-top: -5vw;
+    height: 8vh;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    
+  }
+  .akkordeon .sektion .background{
+    position: absolute;
+    width: 100%;
+    margin-top: 8vw;
+    height: 200vw;
+    z-index: -10;
+    
+  }
+
+  .akkordeon .sektion:nth-child(1) {
+    margin-top: 0vw;
+    background-color: #2d4e64;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+  .akkordeon .sektion .background.child1{
+    background-color: #2d4e64;
+  }
+
+  .akkordeon .sektion:nth-child(2) {
+    background-color: #3d5763;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+  .akkordeon .sektion .background.child2{
+    background-color:#3d5763;
+  }
+
+  .akkordeon .sektion:nth-child(3) {
+    background-color:#4f6063;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+  .akkordeon .sektion .background.child3{
+    background-color:#4f6063;
+  }
+
+  .akkordeon .sektion:nth-child(4) {
+    background-color: #626a63;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+  .akkordeon .sektion .background.child4{
+    background-color:#626a63;
+  }
+
+  .akkordeon .sektion:nth-child(5) {
+    background-color: #757363;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+  .akkordeon .sektion .background.child5{
+    background-color:#757363;
+  }
+
+  .akkordeon .sektion:nth-child(6) {
+    background-color: #887c63;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+  .akkordeon .sektion .background.child6{
+    background-color: #887c63;
+  }
+
+  .akkordeon .sektion:nth-child(7) {
+    background-color: #9c8563;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+  .akkordeon .sektion .background.child7{
+    background-color: #9c8563;
+  }
+
+  .akkordeon .sektion:nth-child(8) {
+    background-color: #b08f64;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+  .akkordeon .sektion .background.child8{
+    background-color: #b08f64;
+  }
+
+  .akkordeon .sektion:nth-child(9) {
+    background-color: #c49865;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+  .akkordeon .sektion .background.child9{
+    background-color: #c49865;
+  }
+
+  .akkordeon .sektion:nth-child(10) {
+    background-color: #d7a265;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+  .akkordeon .sektion .background.child10{
+    background-color: #d7a265;
+  }
+
+  .akkordeon .sektion:nth-child(11) {
+    background-color: #ebab67;
+    border-radius: 80vw 80vw 0vw 0vw;
+  }
+  .akkordeon .sektion .background.child11{
+    background-color: #ebab67;
+  }
+
+  .akkordeon .sektion.aktiv {
+    height: calc(100vh - 8vh);
+    margin-top: calc(-8vh * var(--index));
+    margin-bottom: 0;
+    
+  }
+  .akkordeon .sektion.aktiv .background{
+    margin-top: -0vw;
+    height: 200vw;
+  }
+
+  .akkordeon .sektion.aktiv:nth-child(3) {
+    margin-top: calc((-6.4vh * var(--index)));
+  }
+  .akkordeon .sektion.aktiv:nth-child(4) {
+    margin-top: calc((-5.94vh * var(--index)));
+  }
+  .akkordeon .sektion.aktiv:nth-child(5) {
+    margin-top: calc((-5.7vh * var(--index)));
+  }
+  .akkordeon .sektion.aktiv:nth-child(6) {
+    margin-top: calc((-5.55vh * var(--index)));
+  }
+  .akkordeon .sektion.aktiv:nth-child(7) {
+    margin-top: calc((-5.46vh * var(--index)));
+  }
+  .akkordeon .sektion.aktiv:nth-child(8) {
+    margin-top: calc((-5.39vh * var(--index)));
+  }
+  .akkordeon .sektion.aktiv:nth-child(9) {
+    margin-top: calc((-5.34vh * var(--index)));
+  }
+  .akkordeon .sektion.aktiv:nth-child(10) {
+    margin-top: calc((-5vh * var(--index)));
+  }
+  .akkordeon .sektion.aktiv:nth-child(10) {
+    margin-top: calc((-5.3vh * var(--index)));
+  }
+
+  .akkordeon .sektion.aktiv:last-child {
+   height: 100vh !important;
+   margin-top: calc((-5.26vh * var(--index)));
+  }
+
+  .akkordeon .inhalt {
+    display: none;
+    padding: 10px;
+    
+  }
+
+  .akkordeon .sektion.aktiv .inhalt {
+    display: block;
+  }
+
+  .inhalt {
+    
+
+  }
+
+
+  h1{
+    color: magenta;
+    font-family: "LIGHT";
+    font-size: 1.2em;
+    text-align: center;
+}
+
+h2{
+    color: magenta;
+    font-family: "TEXT";
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.diaryText{
+  color: magenta;
+    font-family: "TEXT";
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+.textarea {
+  background-color: greenyellow;
+  color: magenta;
+  padding: 1em;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: none;
+  font-family: "BOLD";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  width: 200px;
+  height: 100px;
+  transition: all 0.2s;
+  resize: none;
+  overflow: auto;
+}
+
+.textarea.small {
+  height: 10px;
+}
+
+.textarea:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+
+.textarea:focus {
+  cursor: text;
+  color: cyan;
+  background-color: white;
+  border-color: gold;
+}
+
+.scroll-box {
+    background: #f4f4f4;
+    height: 400px; /* maximum height of the box, feel free to change this! */
+    margin: 120px 15px 15px 15px;
+    padding: 15px;
+    overflow-y: scroll;
+}
+
+.Bild{
+  width: 50vw;
+  mix-blend-mode: multiply;
+  filter: brightness(1.2);
+  filter: sepia(1)
+}
